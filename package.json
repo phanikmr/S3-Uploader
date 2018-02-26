@@ -1,8 +1,8 @@
 {
-    "name": "s3-uploader",
+    "name": "uploader-s3",
     "version": "1.0.0",
     "description": "fastest and reliable uploader of files to aws s3 ",
-    "main": "s3-uploader.js",
+    "main": "s3uploader.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -15,9 +15,16 @@
         "signature",
         "v4"
     ],
-    "author": "phanikumar",
-    "license": "ISC",
-    "dependencies": {
-
-    }
+    "author": "ppkphani",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/phanikmr/S3-Uploader.git"
+    },
+    "bugs": {
+        "url": "https://github.com/phanikmr/S3-Uploader/issues"
+    },
+    "homepage": "https://github.com/phanikmr/S3-Uploader#readme"
 }

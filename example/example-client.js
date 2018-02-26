@@ -1,27 +1,3 @@
-# S3-Uploader
-
-S3-Uploader is a javascript library for uploading files from a browser to AWS S3, using parallel S3's multipart & non multipart uploads with MD5 checksum support and control over pausing / resuming the upload.
-
-Adapted from +[Fine uploader] (https://github.com/FineUploader/fine-uploader)
- +[EvaporateJS] (https://github.com/TTLabs/EvaporateJS)
-
-This Javascript library Tweaked by adapting best features of Fine Uploader & EvaporateJS for max uploading speed to AWS S3 bucket
-
-# Installation
-
-S3-Uploader is publiashed as a Node module
-
-```bash
-$ npm install uploader-s3
-```
-Otherwise, include it in your HTML:
-
-```html
-<script language="javascript" type="text/javascript" src="../dist/s3uploader.min.js"></script>
-```
-
-## Example
-```javascript
 // Require Jquery
 
 var MultipartUploaderRef;
@@ -39,6 +15,10 @@ uploadingFilesList$ = null;
 
 
 function initialiseUploader(region, access_key, bucket, signer_url, time_url, sign_params) {
+    if (!Promise) {
+        Promise = Uploder.Promise;
+    }
+
     s3Details.s3bucket = bucket;
     s3Details.signatureURL = signer_url;
     s3Details.awsRegion = region;
@@ -182,4 +162,3 @@ function uploadFile(file, path) {
             });
     }
 }
-```

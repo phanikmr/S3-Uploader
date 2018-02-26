@@ -8470,12 +8470,12 @@
                 onlyRetryForSameFileName: false,
                 timeUrl: null,
                 cryptoMd5Method: function(data) {
-                    const md = forge.md.md5.create();
+                    var md = forge.md.md5.create();
                     md.update(data);
                     return forge.util.encode64(md.digest());
                 },
                 cryptoHexEncodedHash256: function(data) {
-                    const md = forge.md.sha256.create();
+                    var md = forge.md.sha256.create();
                     md.update(data);
                     return md.digest().toHex();
                 },

@@ -1,0 +1,217 @@
+/* You can add global styles to this file, and also import other style files */
+
+.file-uploader-modal {
+	display: block;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-header {
+    background: #006eb6;
+    padding: 5px 15px;
+    border: 0;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-header h4,
+.file-uploader-modal .modal-dialog .modal-content .modal-header h6{
+	color: #fff;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body {
+	padding: 0;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .upload-heading {
+    background: #003a5f;
+    padding: 15px;
+    clear: both;
+    overflow: hidden;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .upload-heading label {
+    color: #fff;
+    padding-left: 35px;
+    font-size: 14px;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .upload-heading label.label {
+    padding-left: 0;
+    cursor: auto;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .file-head {
+    padding: 10px 15px;
+    clear: both;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(128, 128, 128, .2);
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .file-head h5 {
+    color: #000;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area {
+    padding: 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block {
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 35px;
+    height: 45vh;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block p {
+    font-size: 16px;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .circular-div {
+    background: rgba(0, 0, 0, .2);
+    border-radius: 200px;
+    color: #fff;
+    height: 90px;
+    font-weight: 700;
+    width: 90px;
+    display: table;
+    margin: 20px auto;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .circular-div p {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .circular-div p .icon-files {
+    font-size: 32px;
+    color: #039;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block.drag-border {
+    border: 3px dashed #003a5f;
+    height: 45vh;
+}
+
+
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing {
+	padding:0;
+	margin:0;
+	background:#fff;
+	overflow-y:auto;
+	overflow-x:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:48px;
+	
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing > li {
+	margin:0;
+	clear:both;
+	list-style:none;
+	border-bottom:1px solid rgba(0,0,0,.2);
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li {
+	margin: 0;
+	padding: 5px 15px 2px 20px ;
+	line-height: 15px;
+	font-size: 14px;
+	background-color: transparent;
+	text-align:left;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li > div.pull-right
+{
+float:right;
+	padding:15px 0;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li > .pw-upload-filename
+{
+	display:inline-block;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li a
+{
+	display:inline-block;
+	margin-bottom:0;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing .file-list-actions li a.file-cancel
+{
+	color: #D60000;
+	text-decoration: none;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li h4
+{
+	margin-bottom:0px;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li.file-success {
+	background-color: #B0CC8F;
+	color:rgb(62, 138, 62);
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li.file-fail {
+	background-color: #ffe4e8;
+	color: #D60000;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li > div.pull-right {
+	padding:0;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li > i {
+	font-size: 2em;
+	}
+	.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li div.arc-upload-filename {
+	display:inline-block;
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li div.arc-upload-filename h5,
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li div.arc-upload-filename h6 {
+	margin:5px;
+	}
+	.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li ul.file-list-actions {
+	list-style:none;
+	float:right;
+	}
+	
+	.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li ul.file-list-actions li {
+	float:left;
+	}
+
+	.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .file-listing li .progress {
+		height:2px;
+		margin-bottom: 5px;
+	}
+.file-uploader-modal .modal-dialog .modal-content .modal-body .drag-area .block .drag-drop .true-center div em i {
+	font-size:2em
+}
+
+.file-uploader-modal .modal-dialog .modal-content .modal-footer button {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	outline: 0;
+	padding: 6px 16px;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-footer button.btn-default {
+	background: rgba(0,0,0,.5);
+	border: 1px solid rgba(0,0,0,.5);
+	color: #fff;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-footer button.btn-secondary {
+		background: #09f;
+		border: 1px solid #09f;
+		color: #fff;
+}
+.file-uploader-modal .modal-dialog .modal-content .modal-footer button.btn-primary {
+	
+	background: #006eb6;
+	border: none;
+	color: #fff;
+}
+
+.file-uploader-modal .modal-dialog.modal-responsive {
+	width: initial;
+	margin: 15px;
+}

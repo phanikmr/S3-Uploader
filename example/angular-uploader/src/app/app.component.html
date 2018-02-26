@@ -1,0 +1,104 @@
+<div class="modal file-uploader-modal" tabindex="-1" role="dialog" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)">
+    <div class="modal-dialog modal-responsive modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Advance file search</h4> -->
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h4>
+                            <i class="icon icon-skysite-logo ico-lg"></i>
+                            <span>Upload Collection file</span>
+                        </h4>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <h6>Available free space (1.96 GB) </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="upload-heading">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <!-- <div class="radio">
+                                <label class="label">In case of duplicate file </label>
+                                <label>
+                                    <input type="radio" name="actionId" value="1" (click)="changeUploader(false)">EvaporatrJs</label>&nbsp;
+                                <label>
+                                    <input type="radio" name="actionId" value="2" checked="checked" (click)="changeUploader(true)">Fine Uploader</label>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="file-head">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h5 class="pull-left">Target Folder : {{folderDetails.FolderName}} </h5>
+                            <button class="btn btn-primary pull-right" type="button">Add attribute to all</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drag-area" (drop)="onDrop($event)">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="block" *ngIf="filesList.length === 0">
+                                <div class="circular-div">
+                                    <p>
+                                        <i class="icon icon-files"></i>
+                                    </p>
+                                </div>
+                                <p>Drop files here or click select files below</p>
+                            </div>
+                            <div class="block" *ngIf="filesList.length > 0">
+                                <ul class="file-listing">
+                                    <li *ngFor="let file of filesList; let i=index" [ngClass]="{'file-success': file.percentage==100, 'file-fail': file.retryCount==3}">
+
+                                        <i class="icon icon-files"></i>
+                                        <div class="arc-upload-filename">
+                                            <h5 class="file-name">{{file.name}}</h5>
+                                            <h6 class="file-progression">{{file.progress.speed}} - {{file.progress.loaded}} of {{file.readableSize}} | {{file.progress.timeLeft}}
+                                            </h6>
+                                        </div>
+                                        <ul class="file-list-actions">
+                                            <li>
+                                                <span class="file-spinner"> </span>
+                                            </li>
+                                            <li>
+                                                <span class="file-status"></span>
+                                            </li>
+                                            <li>
+                                                <a class="file-edit">
+                                                    <i class="ico-upld-edit"></i>
+                                                </a>
+                                            </li>
+                                            <li *ngIf="file.percentage!=100">
+                                                <a class="file-cancel" (click)="cancelUpload(file, i)">
+                                                    <i class="icon icon-close"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="file.percentage" [ngStyle]="{'width': file.percentage+'%'}">
+                                                {{file.percentage}}%
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <label *ngIf="!disableUpload" id="lblFileCount" style="padding-right:10px; line-height:30px;">{{filesList.length}} File(s) selected</label>
+                <label *ngIf="disableUpload" id="lblFileCount" style="padding-right:10px; line-height:30px;">Uploaded: {{filesUploaded}}/{{filesList.length}}</label>
+                <button type="button" [disabled]="disableUpload" class="btn btn-primary">Select files from cloud</button>
+                <input #fileInput type="file" (change)="fileschoosed($event)" multiple="multiple" style="display:none;" />
+                <button type="button" [disabled]="disableUpload" class="btn btn-secondary" (click)="openfileDialog()">Select files</button>
+                <button type="button" [disabled]="disableUpload" class="btn btn-default" (click)="uploadSessionFiles(1)">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -64,7 +64,7 @@ app.post('/awsSignature', (req, res) => {
     try {
         var signedPolicy = {
             policy: base64Policy,
-            signature: signatureHelper.hmac(signingKey, base64Policy).toHex()
+            signature: hmac(signingKey, base64Policy).toHex()
         }
         res.send(signedPolicy);
     } catch (error) {

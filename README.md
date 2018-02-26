@@ -22,7 +22,6 @@ Otherwise, include it in your HTML:
 
 ## Example
 ```javascript
-// Require Jquery
 
 var MultipartUploaderRef;
 var BasicUploaderRef;

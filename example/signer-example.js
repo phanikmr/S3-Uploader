@@ -64,7 +64,7 @@ app.post('/awsSignature', (req, res) => {
     try {
         var signedPolicy = {
             policy: base64Policy,
-            signature: signatureHelper.hmac(signingKey, base64Policy).toHex()
+            signature: hmac(signingKey, base64Policy).toHex()
         }
         res.send(signedPolicy);
     } catch (error) {
@@ -72,6 +72,16 @@ app.post('/awsSignature', (req, res) => {
     }
 });
 
+app.get('/awsInfo', (req, res) => {
+    res.send({
+        AccessKey: '',
+        Region: 'us-west-1',
+        Service: 's3',
+        Version: 'AWS4',
+        RequestType: 'aws4_request',
+        Bucket: '',
+    });
+})
 
 var hmac = (key, msg) => {
     var hmacForge = forge.hmac.create();

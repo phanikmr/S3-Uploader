@@ -51,7 +51,6 @@ app.post('/awsSignature', (req, res) => {
     var policy = req.body;
 
     const base64Policy = new Buffer(JSON.stringify(policy)).toString('base64');
-    var AWS_CONST = global.CurrentEnvironment.AWS_CONST;
     var signingKeys = global.CurrentEnvironment.AWSSigningKey;
     var signingKey;
     if (signingKeys[dateString()] === undefined) {

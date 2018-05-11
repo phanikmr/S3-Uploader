@@ -2074,7 +2074,7 @@
                 self._preventRetries[id] = responseJSON[self._options.retry.preventRetryResponseProperty];
                 if (self._shouldAutoRetry(id, name, responseJSON)) {
                     var retryWaitPeriod = self._options.retry.autoAttemptDelay * 1e3;
-                    self._maybeParseAndSendUploadError.apply(self, arguments);
+                    // self._maybeParseAndSendUploadError.apply(self, arguments);
                     self._options.callbacks.onAutoRetry(id, name, self._autoRetries[id]);
                     self._onBeforeAutoRetry(id, name);
                     self._uploadData.setStatus(id, Uploader.status.UPLOAD_RETRYING);
